@@ -1,0 +1,64 @@
+.header {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en lugar de forzar un desbordamiento */
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #ffffff;
+    width: 100%; /* Asegúrate de que el ancho sea 100% */
+    position: relative;
+    left: 0;
+  }
+  
+  .header-title {
+    font-size: 1.5rem;
+    flex: 1; /* Permite que el título ocupe espacio disponible */
+  }
+  
+  .nav {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap; /* Permite que los botones se envuelvan si es necesario */
+  }
+  
+  .nav-button {
+    background-color: #f4f8ca;
+    color: #060505;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .nav-button-yellow {
+    background-color: transparent; /* O puedes mantener el fondo transparente */
+    color: rgb(248, 185, 11); /* Cambia el color del texto a amarillo */
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Media Queries para tamaños de pantalla más pequeños */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+      align-items: flex-start; /* Alinea elementos a la izquierda */
+    }
+  
+    .header-title {
+      margin-bottom: 1rem; /* Agrega espacio debajo del título */
+    }
+  
+    .nav {
+      width: 100%; /* Asegúrate de que la navegación ocupe todo el ancho */
+      justify-content: space-around; /* Espacio alrededor de los botones */
+    }
+  
+    .nav-button,
+    .nav-button-yellow {
+      flex: 1; /* Permite que los botones ocupen espacio igual */
+      margin: 0.5rem 0; /* Agrega un margen vertical entre los botones */
+    }
+  }
+  
